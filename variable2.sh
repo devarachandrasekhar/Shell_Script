@@ -1,6 +1,6 @@
 number1=$1
 
-number1=$2
+number2=$2
 
 SUM=$((number1+number2))
 
