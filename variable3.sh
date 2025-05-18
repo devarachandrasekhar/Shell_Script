@@ -7,4 +7,4 @@ echo "your user name is $username"
 
 persons=("ram","jam","dam")
 
-echo "first person : {$person[$1]}"
+echo "first person : ${persons[1]}"
