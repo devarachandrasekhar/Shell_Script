@@ -27,4 +27,5 @@ if [ $? -ne 0 ]
   echo "$i failed"
  else
   echo "$i installed successfully" 
+fi  
 }
