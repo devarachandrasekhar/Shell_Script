@@ -1,10 +1,11 @@
 #!/bin/bash
 
-Date=$(date +%F+%H-%M-%S)
+Date=$(date +%F-%H-%M-%S)
 
-echo "$Date"
-
+SCRIPT_NAME=$0
 LOGDIR=/home/ec2-user/Shell_Script/shell_logs
+
+STORING_DELETED_LOGFILE_NAME=$LOGDIR/$SCRIPT_NAME-$DATE.log
 
 APP_LOG_DIR=/home/ec2-user/app_log
 
@@ -15,7 +16,7 @@ echo "These are the $FIND_DELETE_LOGFILE"
 
 while read -r line;
  do
-  echo "Deleting: $line" &>>$LOGDIR
+  echo "Deleting: $line" &>>$LOGFILE
   rm -f "$line"
 done <<< $FIND_DELETE_LOGFILE
 
