@@ -1,3 +1,4 @@
+#!/bin/bash
 
 DATE=$(date +%f)
 SCRIPT_NAME=$0
