@@ -16,7 +16,8 @@ echo "These are the $FIND_DELETE_LOGFILE"
 
 while read -r line;
  do
-  echo "Deleting: $line" &>>$LOGFILE
+  echo "Deleting: $line" &>>$STORING_DELETED_LOGFILE_NAME
+
   rm -f "$line"
 done <<< $FIND_DELETE_LOGFILE
 
