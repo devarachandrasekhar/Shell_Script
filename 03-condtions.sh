@@ -8,3 +8,8 @@ if [ $number1 -gt 0 ]
  else
   echo "echo "The given number $number1 is less then 0""
 fi
+
+
+user=$(id -u)
+
+echo "$user"
