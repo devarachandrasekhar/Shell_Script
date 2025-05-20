@@ -9,7 +9,7 @@ if [ $user -ne 0 ]
     echo "you have root acess"
 fi
 
-yum install myysql -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
  then 
