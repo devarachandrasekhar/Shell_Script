@@ -18,7 +18,7 @@ validate ()
    then 
     echo -e "$2 is $R failed $N"
    else
-    echo "$2 is $G succssful $N"
+    echo -e "$2 is $G succssful $N"
 fi    
 }
 
