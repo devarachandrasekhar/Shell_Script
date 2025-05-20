@@ -18,9 +18,8 @@ for i in $@
    yum install $i -y #&>>LOGFILE
 
    validate $? $i
- done  
 
-validate ()
+   validate ()
 {
 if [ $1 -ne 0 ]
  then 
@@ -29,3 +28,5 @@ if [ $1 -ne 0 ]
   echo "$i installed successfully" 
 fi  
 }
+ done  
+
