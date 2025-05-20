@@ -20,6 +20,19 @@ if [ $USERID -ne 0]
 
 
 
+VALIDATE() {
+  if [ $1 -ne 0 ]; then 
+    echo -e "$2 .. $R failed $N"
+    exit 1
+  else
+    echo -e "$2 $G installed successfully $N"
+  fi
+}
+
+
+
+
+
 for i in $@
  do
 
@@ -35,15 +48,5 @@ for i in $@
     fi
    
  done  
-
-
-VALIDATE() {
-  if [ $1 -ne 0 ]; then 
-    echo -e "$2 .. $R failed $N"
-    exit 1
-  else
-    echo -e "$2 $G installed successfully $N"
-  fi
-}
 
 
