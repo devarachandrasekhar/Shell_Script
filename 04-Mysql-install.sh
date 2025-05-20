@@ -9,4 +9,12 @@ if [ $user -ne 0 ]
     echo "you have root acess"
 fi
 
-yum install mysql -y
+yum install myysql -y
+
+if [ $? -ne 0 ]
+ then 
+  echo "mysql installed successfully"
+ else
+   echo "mysql failed"
+fi
+
