@@ -29,7 +29,7 @@ for i in $@
         then
             echo "$i is not installed lets install it"
             yum install $i -y &>>LOGFILE
-            validate $? $i
+            VALIDATE $? $i
         else
             echo "$i alredy installed"
     fi
@@ -38,12 +38,14 @@ for i in $@
 
 
 
-validate ()
+VALIDATE ()
 {
 if [ $1 -ne 0 ]
  then 
-  echo -e "$2 $R failed $N "
+  echo -e "$2 .. $R failed $N"
+  exit 1
  else
-  echo -e "$2 $G installed successfully $N " 
+  echo -e "$2 $G installed successfully $N" 
 fi  
 }
+
