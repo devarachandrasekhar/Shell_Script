@@ -7,3 +7,4 @@ if [ $user -ne 0 ]
    exit 1
  else
     echo "you have root acess"
+fi
