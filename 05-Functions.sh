@@ -1,7 +1,11 @@
 #!/bin/bash
 
 
-LOGFILE=/tmp/ls.log
+DATE=$(date)
+
+
+echo "$DATE"
+LOGFILE=/tmp/$DATE.log
 
 
 validate ()
@@ -38,6 +42,6 @@ validate $? mysql
 
 #Installation of postfix
 
-yum install postfix -y
+yum install postfix -y &>>$LOGFILE
 
 validate $? postfix 
