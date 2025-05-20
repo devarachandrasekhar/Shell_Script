@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 
 #passing the values to varibales from commad line
