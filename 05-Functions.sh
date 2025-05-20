@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-
+LOGFILE=/tmp/ls.log
 
 
 validate ()
@@ -32,6 +32,6 @@ fi
 #installation of my sql, by default in shell script it cannt validate the he previoues commad is successfull or not we need to validate
 
 
-yum install mysql -y &>>ls.log
+yum install mysql -y &>>LOGFILE
 
 validate $? mysql
