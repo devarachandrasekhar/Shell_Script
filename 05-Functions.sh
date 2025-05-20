@@ -11,6 +11,7 @@ validate ()
     echo "$2 is failed"
    else
     echo "$2 is succssful"
+fi    
 }
 
 
