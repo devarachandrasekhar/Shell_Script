@@ -10,6 +10,3 @@ if [ $number1 -gt 0 ]
 fi
 
 
-user=$(id -u)
-
-echo "$user"
