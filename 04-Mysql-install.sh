@@ -9,6 +9,8 @@ if [ $user -ne 0 ]
     echo "you have root acess"
 fi
 
+#installation of my sql
+
 yum install mysql -y
 
 if [ $? -ne 0 ]
@@ -17,4 +19,15 @@ if [ $? -ne 0 ]
  else
    echo "mysql installed successfully"
 fi
+
+#Installation of postfix
+
+yum install postfix -y
+
+if [ $? -ne 0 ]
+ then
+  echo "postfix failed"
+ else
+  echo "postfix successfully installed"
+fi    
 
