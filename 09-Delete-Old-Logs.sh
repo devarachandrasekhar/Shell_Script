@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Date=$(date +%F-%H-%M-%S)
+DATE=$(date +%F-%H-%M-%S)
 
 SCRIPT_NAME=$0
 LOGDIR=/home/ec2-user/Shell_Script/shell_logs
@@ -20,6 +20,7 @@ while read -r line;
 
   rm -f "$line"
 done <<< $FIND_DELETE_LOGFILE
+
 
 
   #touch -t 202312251030.00 cart_oldfile.log  202312251030.00 redis_oldfile.log
