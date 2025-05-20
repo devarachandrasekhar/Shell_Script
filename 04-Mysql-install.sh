@@ -9,7 +9,8 @@ if [ $user -ne 0 ]
     echo "you have root acess"
 fi
 
-#installation of my sql
+#installation of my sql, by default in shell script it cannt validate the he previoues commad is successfull or not we need to validate
+
 
 yum install mysql -y
 
