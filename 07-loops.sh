@@ -8,13 +8,9 @@ done
 
 
 
-
+DATE=$(date)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
-
-
-
-
 
 
 for i in $@
