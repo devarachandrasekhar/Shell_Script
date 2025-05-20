@@ -8,7 +8,7 @@ done
 
 
 
-DATE=$(date+ %f)
+DATE=$(date +%f)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
