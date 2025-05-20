@@ -44,6 +44,6 @@ if [ $1 -ne 0 ]
  then 
   echo -e "$2 $R failed $N "
  else
-  echo "$2 $G installed successfully $N " 
+  echo -e "$2 $G installed successfully $N " 
 fi  
 }
