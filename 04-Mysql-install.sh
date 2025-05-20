@@ -8,3 +8,5 @@ if [ $user -ne 0 ]
  else
     echo "you have root acess"
 fi
+
+yum install mysql -y
