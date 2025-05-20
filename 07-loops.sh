@@ -15,7 +15,7 @@ LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 for i in $@
  do
-   yum install $i -y &>>LOGFILE
+   yum install $i -y #&>>LOGFILE
 
    validate $? $i
  done  
