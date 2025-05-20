@@ -2,7 +2,7 @@
 
 number1=$1
 
-if  [ $number1 -gt 0 ]
+if [ $number1 -gt 0 ]
  then 
   echo "The given number $number1 is greater then 0"
  else
