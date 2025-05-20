@@ -46,6 +46,7 @@ if [ $1 -ne 0 ]
   exit 1
  else
   echo -e "$2 $G installed successfully $N" 
-fi  
+fi 
+
 }
 
