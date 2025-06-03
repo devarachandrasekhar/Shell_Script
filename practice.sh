@@ -37,12 +37,12 @@
 echo "please enter username"
 read -s username
 
-read -s password
-
 echo "username: $username"
 
 
 echo "please enter password"
+
+read -s password
 
 echo "username: $password"
 
