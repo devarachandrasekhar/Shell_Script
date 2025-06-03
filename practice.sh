@@ -55,9 +55,9 @@ echo "person1 ${names[2]}"
 
 echo "person2 ${names[0]}"
 
-echo "all vales ${names[$@]}"
+echo "all vales ${names[@]}"
 
-echo "number of arguments ${names[$#]}"
+echo "number of arguments ${names[#]}"
 
 
 
