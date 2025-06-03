@@ -47,7 +47,7 @@
 # echo "username: $password"
 
 ###########################################################################
-
+#ARRAYS
 
 names=("ram" "jam" "dam" "shyam")
 
@@ -57,7 +57,7 @@ echo "person2 ${names[0]}"
 
 echo "all vales ${names[@]}"
 
-echo "number of arguments ${names["#"]}"
+echo " ${names[$1]}"
 
 
 
