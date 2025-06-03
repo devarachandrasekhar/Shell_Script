@@ -22,7 +22,7 @@ if [ $1 -ne 0 ]
 fi 
 }
 
-echo "$var1 and $var2 are good friend till $DATE
+echo "$var1 and $var5 are good friend till $DATE"
 
 validate $? all_values
 
