@@ -7,8 +7,9 @@
 
 var1=$1
 var2=$2 
+DATE=$(date)
 
-echo "$var1 and $var2 are good friens"
+echo "$var1 and $var2 are good friend till $DATE"
 
 echo "$?"
 
