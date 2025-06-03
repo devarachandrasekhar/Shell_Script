@@ -14,5 +14,17 @@ echo "$var1 and $var2 are good friend till $DATE"
 echo "$?"
 
 echo "$@"
+validate $? all_values
+
 echo "$#"
 echo "$0"
+
+
+validate () {
+
+if [ $? -ne 0 ]
+ then 
+ echo "last command failed"
+ exit 1
+fi 
+}
