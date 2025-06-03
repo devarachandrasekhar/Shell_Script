@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PERSONS=("ram","jam","dam")
+PERSONS=("ram" "jam" "dam")
 
  echo "first person :${PERSONS[0]}" 
 
