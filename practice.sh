@@ -59,6 +59,10 @@ echo "all vales ${names[@]}"
 
 echo " ${names[$1]}"
 
+echo " ${names[$2]}"
+
+
+
 
 
 
