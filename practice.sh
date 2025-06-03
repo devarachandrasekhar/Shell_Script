@@ -10,7 +10,8 @@ var2=$2
 DATE=$(date)
 
 
-validate () {
+validate () 
+{
 
 if [ $? -ne 0 ]
  then 
@@ -21,10 +22,9 @@ fi
 
 echo "$var1 and $var2 are good friend till $DATE"
 
-echo "$?"
+validate $? all_values
 
 echo "$@"
-validate $? all_values
 
 echo "$#"
 echo "$0"
