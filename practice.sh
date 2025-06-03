@@ -49,19 +49,25 @@
 ###########################################################################
 #ARRAYS
 
-names=("ram" "jam" "dam" "shyam")
+# names=("ram" "jam" "dam" "shyam")
 
-echo "person1 ${names[2]}"
+# echo "person1 ${names[2]}"
 
-echo "person2 ${names[0]}"
+# echo "person2 ${names[0]}"
 
-echo "all vales ${names[@]}"
+# echo "all vales ${names[@]}"
 
-echo " ${names[$1]}"
+# echo " ${names[$1]}"
 
-echo " ${names[$2]}"
+###################################################################
 
 
+NUMBER1=$1
+NUMBER2=$2
+
+SUM=((NUMBER1+NUMBER2))
+
+echo "$SUM"
 
 
 
