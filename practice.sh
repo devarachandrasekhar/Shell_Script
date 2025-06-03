@@ -35,9 +35,13 @@
 ######################################################################
 
 echo "please enter username"
-#read -s username
+read -s username
 
-echo "$username"
+echo "please enter password"
+
+echo "username: $username"
+
+echo "username: $password"
 
 
 
