@@ -13,7 +13,7 @@ DATE=$(date)
 validate () 
 {
 
-if [ $? -ne 0 ]
+if [ $1 -ne 0 ]
  then 
  echo "last command failed"
  exit 1
