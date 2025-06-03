@@ -34,18 +34,26 @@
 
 ######################################################################
 
-echo "please enter username"
-read -s username
+# echo "please enter username"
+# read -s username
 
-echo "username: $username"
+# echo "username: $username"
 
 
-echo "please enter password"
+# echo "please enter password"
 
-read -s password
+# read -s password
 
-echo "username: $password"
+# echo "username: $password"
 
+###########################################################################
+
+
+names=(ram,jam,dam,shyam)
+
+echo "person1${names[0]}"
+
+echo "person1${names[1]}"
 
 
 
