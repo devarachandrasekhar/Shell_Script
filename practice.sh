@@ -51,9 +51,9 @@
 
 names=("ram" "jam" "dam" "shyam")
 
-echo "person1 ${names[$2]}"
+echo "person1 ${names[2]}"
 
-echo "person2 ${names[$1]}"
+echo "person2 ${names[1]}"
 
 
 
