@@ -4,32 +4,41 @@
 # var2=ram
 
 # echo "$var1 and $var2 are good friends"
+#################################################################
+# var1=$1
+# var2=$2 
+# DATE=$(date)
 
-var1=$1
-var2=$2 
-DATE=$(date)
+
+# validate () 
+# {
+
+# if [ $1 -ne 0 ]
+#  then 
+#  echo "last command failed"
+#  exit 1
+#  else
+#  echo "please check"
+# fi 
+# }
+
+# echo "$var1 and $var5 are good friend till $DATE"
+
+# validate $? all_values
+
+# echo "$@"
+# validate $? all_values
+
+# echo "$#"
+# echo "$0"
+
+######################################################################
+
+echo "please enter username"
+read -s username
+
+echo "$username"
 
 
-validate () 
-{
-
-if [ $1 -ne 0 ]
- then 
- echo "last command failed"
- exit 1
- else
- echo "please check"
-fi 
-}
-
-echo "$var1 and $var5 are good friend till $DATE"
-
-validate $? all_values
-
-echo "$@"
-validate $? all_values
-
-echo "$#"
-echo "$0"
 
 
