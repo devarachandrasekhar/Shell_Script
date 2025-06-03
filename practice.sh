@@ -1,0 +1,6 @@
+#!/bin/bash
+
+var1=chandu
+var2=ram
+
+echo "$var1 and $var2 are good friends"
