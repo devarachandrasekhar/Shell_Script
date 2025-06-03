@@ -11,3 +11,6 @@ var2=$2
 echo "$var1 and $var2 are good friens"
 
 echo "$?"
+
+echo "$@"
+echo "$#"
