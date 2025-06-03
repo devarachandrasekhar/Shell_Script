@@ -27,6 +27,7 @@ echo "$var1 and $var5 are good friend till $DATE"
 validate $? all_values
 
 echo "$@"
+validate $? all_values
 
 echo "$#"
 echo "$0"
