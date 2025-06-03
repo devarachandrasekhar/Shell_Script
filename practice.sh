@@ -17,6 +17,8 @@ if [ $1 -ne 0 ]
  then 
  echo "last command failed"
  exit 1
+ else
+ echo "please check"
 fi 
 }
 
