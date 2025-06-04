@@ -83,7 +83,7 @@
 
 
 DATE=$(date +%F)
-SCRIPT_NAME=$("$0")
+SCRIPT_NAME=$0
 LOGFILE_DIRECTORY=/home/ec2-user/shell_practice_logs/
 LOG_FILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
 
