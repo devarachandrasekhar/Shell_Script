@@ -73,16 +73,57 @@
 ############################################################################
 
 
-for i in {1..10}
+# for i in {1..10}
+# do 
+
+# echo $i
+# done
+#############################################################################
+
+
+
+DATE=$(date +%F)
+SCRIPT_NAME=$($0)
+LOGFILE_DIRECTORY=/home/ec2-user/shell_practice_logs/
+LOG_FILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
+
+
+USER=$(id -u)
+
+if [ $USER -ne 0 ]
+  then 
+
+  echo "run with rrrot access"
+  else
+  echo "you are running with root acesss"
+fi 
+
+
+
+validate ()
+{
+if [ $1 -ne 0 ]
+  then 
+
+  echo "$2 failed"
+  else
+  echo "$2 installed successfully"
+fi 
+}
+
+
+for i in $@
 do 
+    yum installed list $i
 
-echo $i
+    if [ $? -ne 0 ]
+      then 
+      echo "$i is not installed lets install it"
+      yum install $i -y
+      validate $? $i
+      else
+      echo "$i is installed already"
+    fi  
+
 done
-
-
-
-
-
-
-
 
