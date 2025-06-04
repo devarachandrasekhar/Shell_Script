@@ -113,7 +113,7 @@ if [ $1 -ne 0 ]
 
   echo -e "$2 $R failed $N" &>>$LOG_FILE
   else
-  echo -e "$2 $G installed successfully $R" &>>$LOG_FILE
+  echo -e "$2 $G installed successfully $N" &>>$LOG_FILE
 fi 
 }
 
