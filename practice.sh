@@ -88,6 +88,12 @@ LOGFILE_DIRECTORY=/home/ec2-user/shell_practice_logs/
 LOG_FILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
 
 
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+Y="\e[33m"   
+
+
 USER=$(id -u)
 
 if [ $USER -ne 0 ]
@@ -105,24 +111,24 @@ validate ()
 if [ $1 -ne 0 ]
   then 
 
-  echo "$2 failed"
+  echo -e "$2 $R failed $N"
   else
-  echo "$2 installed successfully"
+  echo -e "$2 $G installed successfully $R"
 fi 
 }
 
-#&>>$LOG_FILE
+
 for i in $@
 do 
-    yum list installed $i 
+    yum list installed $i &>>$LOG_FILE
 
     if [ $? -ne 0 ]
       then 
-      echo "$i is not installed lets install it"
-      yum install $i -y
+      echo "$i is not installed lets install it" &>>$LOG_FILE
+      yum install $i -y &>>$LOG_FILE
       validate $? $i
       else
-      echo "$i is installed already"
+      echo -e "$i $G is installed already $R" &>>$LOG_FILE
     fi  
 
 done
