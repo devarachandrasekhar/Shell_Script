@@ -111,9 +111,9 @@ validate ()
 if [ $1 -ne 0 ]
   then 
 
-  echo -e "$2 $R failed $N"
+  echo -e "$2 $R failed $N" &>>$LOG_FILE
   else
-  echo -e "$2 $G installed successfully $R"
+  echo -e "$2 $G installed successfully $R" &>>$LOG_FILE
 fi 
 }
 
@@ -128,7 +128,7 @@ do
       yum install $i -y &>>$LOG_FILE
       validate $? $i
       else
-      echo -e "$i $G is installed already $R" &>>$LOG_FILE
+      echo -e "$i $G is installed already $N" &>>$LOG_FILE
     fi  
 
 done
