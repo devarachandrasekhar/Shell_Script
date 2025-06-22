@@ -141,6 +141,7 @@ perm=$(id -u)
 echo "$perm"
 
 DATE=$(date +%F)
+echo $DATE
 
 if [ $perm -eq 0 ]
 then
@@ -149,4 +150,26 @@ else
 echo "please run with root access"
 fi
 
-echo $DATE
+validate()
+if [ $2 -ne 0 ]
+then 
+echo "$1 failed"
+else
+echo "$1 successfully installed"
+fi
+
+
+
+
+for i in $@
+do 
+yum list installed $1
+
+if [ $? -ne 0 ]
+then
+echo "$1 is not installed lets install it"
+yum install $1 -y
+validate $1 $?
+else 
+echo "$1 already installed"
+done
