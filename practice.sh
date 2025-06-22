@@ -150,14 +150,14 @@ else
 echo "please run with root access"
 fi
 
-validate()
+validate() {
 if [ $2 -ne 0 ]
 then 
 echo "$1 failed"
 else
 echo "$1 successfully installed"
 fi
-
+}
 
 
 
