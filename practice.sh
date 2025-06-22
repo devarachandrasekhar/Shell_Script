@@ -168,7 +168,7 @@ yum list installed $i
   if [ $? -ne 0 ]
   then
   echo "$i is not installed lets install it"
-  yum install $i -y
+  yum delete $i -y
   validate $? $i
   else 
   echo "$i already installed"
