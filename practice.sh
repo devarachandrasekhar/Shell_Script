@@ -151,11 +151,11 @@ echo "please run with root access"
 fi
 
 validate() {
-if [ $2 -ne 0 ]
+if [ $1 -ne 0 ]
 then 
-echo "$1 failed"
+echo "$2 failed"
 else
-echo "$1 successfully installed"
+echo "$2 successfully installed"
 fi
 }
 
@@ -163,14 +163,14 @@ fi
 
 for i in $@
 do 
-yum list installed $1
+yum list installed $i
 
   if [ $? -ne 0 ]
   then
-  echo "$1 is not installed lets install it"
-  yum install $1 -y
-  validate $1 $?
+  echo "$i is not installed lets install it"
+  yum install $i -y
+  validate $? $i
   else 
-  echo "$1 already installed"
+  echo "$i already installed"
   fi
 done
