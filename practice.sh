@@ -140,9 +140,13 @@
 perm=$(id -u)
 echo "$perm"
 
+DATE=$(date)
+
 if [ $perm -eq 0 ]
 then
 echo "you are runing with root access"
 else
 echo "please run with root access"
 fi
+
+echo $DATE
