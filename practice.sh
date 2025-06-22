@@ -140,7 +140,7 @@
 perm=$(id -u)
 echo "$perm"
 
-DATE=$(date +f%)
+DATE=$(date +%F)
 
 if [ $perm -eq 0 ]
 then
