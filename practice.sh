@@ -82,54 +82,61 @@
 
 
 
-DATE=$(date +%F)
-SCRIPT_NAME=$0
-LOGFILE_DIRECTORY=/home/ec2-user/shell_practice_logs/
-LOG_FILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
+# DATE=$(date +%F)
+# SCRIPT_NAME=$0
+# LOGFILE_DIRECTORY=/home/ec2-user/shell_practice_logs/
+# LOG_FILE=$LOGFILE_DIRECTORY/$SCRIPT_NAME-$DATE.log
 
 
-R="\e[31m"
-G="\e[32m"
-N="\e[0m"
-Y="\e[33m"   
+# R="\e[31m"
+# G="\e[32m"
+# N="\e[0m"
+# Y="\e[33m"   
 
 
-USER=$(id -u)
+# USER=$(id -u)
 
-if [ $USER -ne 0 ]
-  then 
+# if [ $USER -ne 0 ]
+#   then 
 
-  echo "run with rrrot access"
-  else
-  echo "you are running with root acesss"
-fi 
-
-
-
-validate ()
-{
-if [ $1 -ne 0 ]
-  then 
-
-  echo -e "$2 $R failed $N" &>>$LOG_FILE
-  else
-  echo -e "$2 $G installed successfully $N" &>>$LOG_FILE
-fi 
-}
+#   echo "run with rrrot access"
+#   else
+#   echo "you are running with root acesss"
+# fi 
 
 
-for i in $@
-do 
-    yum list installed $i &>>$LOG_FILE
 
-    if [ $? -ne 0 ]
-      then 
-      echo "$i is not installed lets install it" &>>$LOG_FILE
-      yum install $i -y &>>$LOG_FILE
-      validate $? $i
-      else
-      echo -e "$i $G is installed already $N" &>>$LOG_FILE
-    fi  
+# validate ()
+# {
+# if [ $1 -ne 0 ]
+#   then 
 
-done
+#   echo -e "$2 $R failed $N" &>>$LOG_FILE
+#   else
+#   echo -e "$2 $G installed successfully $N" &>>$LOG_FILE
+# fi 
+# }
+
+
+# for i in $@
+# do 
+#     yum list installed $i &>>$LOG_FILE
+
+#     if [ $? -ne 0 ]
+#       then 
+#       echo "$i is not installed lets install it" &>>$LOG_FILE
+#       yum install $i -y &>>$LOG_FILE
+#       validate $? $i
+#       else
+#       echo -e "$i $G is installed already $N" &>>$LOG_FILE
+#     fi  
+
+# done
+
+#############################################################################
+
+#!/bin/bash
+
+permission=[ id -u ]
+echo "$permission"
 
