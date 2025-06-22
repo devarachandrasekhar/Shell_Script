@@ -165,11 +165,12 @@ for i in $@
 do 
 yum list installed $1
 
-if [ $? -ne 0 ]
-then
-echo "$1 is not installed lets install it"
-yum install $1 -y
-validate $1 $?
-else 
-echo "$1 already installed"
+  if [ $? -ne 0 ]
+  then
+  echo "$1 is not installed lets install it"
+  yum install $1 -y
+  validate $1 $?
+  else 
+  echo "$1 already installed"
+  fi
 done
