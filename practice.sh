@@ -137,6 +137,12 @@
 
 #!/bin/bash
 
-permission=$(id -u)
-echo "$permission"
+perm=$(id -u)
+echo "$perm"
 
+if [ $perm -eq 0 ]
+then
+echo "you are runing with root access"
+else
+echo "please run with root access"
+fi
