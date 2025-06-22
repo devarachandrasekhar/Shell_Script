@@ -137,6 +137,6 @@
 
 #!/bin/bash
 
-permission=[ id -u ]
+permission=$(id -u)
 echo "$permission"
 
