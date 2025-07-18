@@ -12,7 +12,8 @@ mkdir -p "$BACKUP_DIR"
 
 tar -czf "$BACKUP_DIR/$BACKUP_NAME"  "$BACKUP_DIR"
 
-if [ $? -eq 0 ] then
+if [ $? -eq 0 ] 
+then
  echo "back up successfull"
 
  else 
