@@ -2,14 +2,14 @@
 
 echo "using $@"
 
-for arg in $@
+for arg in "$@"
 do 
 echo "$arg"
 done
 
 echo "using $#"
 
-for arg in  $*
+for arg in  "$*"
 do
 echo "$arg"
 done
