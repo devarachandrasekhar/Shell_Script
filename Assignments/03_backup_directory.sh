@@ -16,7 +16,7 @@ if [ $? -eq 0 ]
 then
  echo "back up successfull"
 
- else 
+else 
 
  echo "backup failed"
 
