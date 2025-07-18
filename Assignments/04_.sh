@@ -7,7 +7,7 @@ do
 echo "$arg"
 done
 
-echo "using $#"
+echo "using $*"
 
 for arg in  "$*"
 do
